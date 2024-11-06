@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- circle_shape.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#D3D3D3"/> <!-- Couleur du cercle -->
+    <corners android:radius="50dp"/> <!-- Rayon complet pour faire un cercle -->
+    <size android:width="50dp" android:height="50dp"/> <!-- Taille du cercle -->
+</shape>

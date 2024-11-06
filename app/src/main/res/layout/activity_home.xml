@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D6D8DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="-74dp">
+
+        <!-- Header contenant l'icône de menu, le texte de salutation, et l'image de profil -->
+        <LinearLayout
+            android:id="@+id/haut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Icône de menu -->
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:src="@drawable/img_5" />
+
+            <TextView
+                android:id="@+id/welcomeMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Hello, [Nom de l'utilisateur]!"
+                android:textSize="23sp"
+                android:textColor="#F4F4F4"
+                android:fontFamily="sans-serif-medium" />
+
+
+            <!-- Image de profil utilisateur -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginLeft="100dp"
+                android:src="@drawable/ic_profile" />
+
+        </LinearLayout>
+
+
+        <!-- Texte de salutation -->
+        <TextView
+            android:id="@+id/greetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuIcon"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="80dp"
+            android:layout_weight="1"
+            android:text="Take your"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/greetingText"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/greetingText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_weight="1"
+                android:text="Backpack"
+                android:textColor="#81573D"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/greetingText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="and"
+                android:textColor="#000000"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="NotSibling" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:layout_marginStart="32dp"
+            android:lineSpacingExtra="3dp"
+            android:layout_weight="1"
+            android:text="discover the breathtaking nature"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling">
+
+        </TextView>
+
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"> <!-- Supprime l'ombre si elle n'est pas souhaitée -->
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/camping" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Texte "Camping" en dessous du cercle -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Camping"
+                    android:textColor="#48444D"
+                    android:textSize="14dp"
+                    android:textStyle="bold" /> <!-- Espace entre le carré et le texte -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"> <!-- Supprime l'ombre si elle n'est pas souhaitée -->
+
+                    <ImageView
+                        android:id="@+id/hiking"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hiking" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Texte "Hiking" en dessous du cercle -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Hiking"
+                    android:textColor="#48444D"
+                    android:textSize="14dp"
+                    android:textStyle="bold" /> <!-- Espace entre le carré et le texte -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear2"
+            android:layout_weight="1"
+            android:orientation="vertical"
+
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="135dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"> <!-- Supprime l'ombre si elle n'est pas souhaitée -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/climbing" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Texte "Camping" en dessous du cercle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="172dp"
+                android:layout_marginTop="8dp"
+                android:text="Climbing"
+                android:textColor="#48444D"
+                android:textSize="14dp"
+                android:textStyle="bold" /> <!-- Espace entre le carré et le texte -->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- Navigation bar (home, camera, add, favorites) -->
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="345dp"
+        android:layout_height="60dp"
+        android:layout_margin="25dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_square_2"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Section Home -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/homeButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                android:tint="#8B8484"
+                android:contentDescription="Home"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:textColor="#8B8484" />
+        </LinearLayout>
+
+        <!-- Section Camera -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/cameraButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/camera"
+                android:tint="#C5CBCC"
+                android:contentDescription="Camera"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:id="@+id/cameraText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:textSize="12sp"
+                android:textColor="#C5CBCC" />
+        </LinearLayout>
+
+        <!-- Section Add -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/addButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/add"
+                android:tint="#C5CBCC"
+                android:contentDescription="Add"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:id="@+id/addText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textSize="12sp"
+                android:textColor="#C5CBCC" />
+        </LinearLayout>
+
+        <!-- Section Favorites -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/favoritesButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/favorites"
+                android:tint="#C5CBCC"
+                android:contentDescription="Favorites"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:id="@+id/favoritesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorites"
+                android:textSize="12sp"
+                android:textColor="#C5CBCC" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

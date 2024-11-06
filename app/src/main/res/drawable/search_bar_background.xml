@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/search_bar_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Définir la couleur de fond de la barre de recherche -->
+    <solid android:color="#FDFBFB" /> <!-- Vous pouvez changer cette couleur -->
+
+    <!-- Ajouter des bords arrondis -->
+    <corners android:radius="30dp" /> <!-- Ajustez le rayon selon vos besoins -->
+
+
+
+    <!-- Ajouter des marges internes (padding) facultatives -->
+    <padding
+        android:left="10dp"
+        android:right="10dp"
+        android:top="5dp"
+        android:bottom="5dp" />
+</shape>
